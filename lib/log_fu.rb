@@ -1,0 +1,3 @@
+module LogFu
+  # Your code goes here...
+end
