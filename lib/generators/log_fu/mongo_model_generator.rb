@@ -12,7 +12,7 @@ class #{class_name}
   # example:
   # define_logged_it_methods :subject
   # TODO
-  end
+end
 FILE
       end
     end
