@@ -2,15 +2,23 @@ Simple Log By MongoDB!
 
 Usage:
 
-
-  例如:
+  example:
+  
+  gem 'log_fu'
+  
   1. rails g log_fu:install
   2. rails g log_fu:mongo_model subject_log
   
-注意:
+  *Only support MongoDB with mongoid*
 
-  和kaminari 0.12.4共用有bug.
+Warn:
+
+  there is a bug when use kaminari 0.12.4.
   https://github.com/amatsuda/kaminari/issues/116
+  
+TODO:
+
+  logs columns customizable 
 
 
 
