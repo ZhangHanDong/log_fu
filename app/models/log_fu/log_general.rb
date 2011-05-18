@@ -35,9 +35,10 @@ module LogFu
           singleton_class.class_eval do
             define_method("#{name}_logged_it") do |request, params|
               client_key    = params[:api_key] if !params[:api_key].blank?
+              client_id     = params[:client_id] if !params[:client_id].blank?
               resource_type = name.to_s.capitalize
               resource_id   = params[:id] if !params[:id].blank?
-              client_id     = Client.find_by_api_key(client_key) if client_key
+              client_id_by_key = Client.find_by_api_key(client_key) if client_key
               channel_id    = params[:channel_id] if !params[:channel_id].blank?
               ip            = request.remote_ip
               uniquely_code = params[:uniquely_code] if !params[:uniquely_code].blank?
@@ -45,7 +46,7 @@ module LogFu
 
               create(:resource_type => resource_type, 
               :resource_id   => resource_id,
-              :client_id     => client_id,
+              :client_id     => (client_id || client_id_by_key),
               :channel_id    => channel_id,
               :ip            => ip,
               :uniquely_code => uniquely_code,
