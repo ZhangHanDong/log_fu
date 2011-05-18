@@ -33,7 +33,7 @@ module LogFu
           singleton_class.class_eval do
             define_method("#{name}_logged_it") do |request, params|
               client_key    = params[:client_key] if !params[:client_key].blank?
-              resource_type = name.capitalize
+              resource_type = name.to_s.capitalize
               resource_id   = params[:id] if !params[:id].blank?
               client_id     = Client.find_by_api_key(client_key) if client_key
               channel_id    = params[:channel_id] if !params[:channel_id]

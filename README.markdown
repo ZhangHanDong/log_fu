@@ -4,6 +4,8 @@ Usage:
 
   example:
   
+  rails g mongoid:config
+  
   gem 'log_fu'
   
   1. rails g log_fu:install
@@ -11,10 +13,7 @@ Usage:
   
   *Only support MongoDB with mongoid*
 
-Warn:
-
-  there is a bug when use kaminari 0.12.4.
-  https://github.com/amatsuda/kaminari/issues/116
+  
   
 TODO:
 
