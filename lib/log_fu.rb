@@ -1,3 +1,6 @@
+require 'rails'
+require 'log_fu/engine'
+
 module LogFu
-  # Your code goes here...
+  #TODO
 end
