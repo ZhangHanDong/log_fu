@@ -38,9 +38,9 @@ module LogFu
               resource_type = name.to_s.capitalize
               resource_id   = params[:id] if !params[:id].blank?
               client_id     = Client.find_by_api_key(client_key) if client_key
-              channel_id    = params[:channel_id] if !params[:channel_id]
+              channel_id    = params[:channel_id] if !params[:channel_id].blank?
               ip            = request.remote_ip
-              uniquely_code = params[:uniquely_code] if !params[:uniquely_code]
+              uniquely_code = params[:uniquely_code] if !params[:uniquely_code].blank?
               created_at    = Time.now
 
               create(:resource_type => resource_type, 
