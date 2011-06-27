@@ -1,4 +1,7 @@
 Simple Log By MongoDB!
+Just use for my project!
+
+**need rails3+/mongoid2.0+**
 
 Usage:
 
